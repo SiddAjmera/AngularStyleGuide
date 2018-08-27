@@ -1,0 +1,7 @@
+<div>This is heroes component</div>
+<ul>
+  <li *ngFor="let hero of filteredHeroes">
+    {{hero.name}}
+  </li>
+</ul>
+<app-filter-text (changed)="filterChanged($event)"></app-filter-text>
