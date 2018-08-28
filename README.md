@@ -1,3 +1,4 @@
+
 # Angular Style Guide
 
 This is an **opinionated** guide to Angular syntax, conventions, and application structure. This style guide presents preferred conventions to write scalable Angular Apps with syntax that is easy to read, understand, and navigate through.
@@ -22,7 +23,7 @@ The foundations for this Style Guide were laid by John Papa. Here's an ng-conf t
 7. End to End test case files should be named like `app.e2e-spec.ts`
 8. Class names must be in **PascalCase**/**UpperCamelCase**. So `app.component.ts` should have a file named `AppComponent`.
 9. Consts should be declared in **UPPER_SNAKE_CASE**. So a const that contains configuration for your Firebase Project may be named FIREBASE_CONFIG for eg.
-10. Interfaces must be declared in **PascalCase**/**UpperCamelCase** with an **I** appended before their names. If there's an interface for machine, then it should be named as IMachine for instance.
+10. Interfaces must be declared in **PascalCase**/**UpperCamelCase**. Interface names should not be prepended with an **I** as  [TypeScript](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines) guidelines discourage the **I** prefix. If there's an interface for machine, then it should be named as `Machine` for instance.
 11. Observables should have a $ sign appended after their names so that they could be useful when scanning through code and looking for observable values. A variable named stopwatchValue that may contain an observable value may be named `stopwatchValue$` for instance.
 12. Property and method names should be in **camelCase**.
 13. **Don't use _ before private** property or method names.
