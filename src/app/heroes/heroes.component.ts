@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FilterTextService } from '../shared/services/filter-text/filter-text.service';
 import { HeroService } from './shared/hero/hero.service';
-import { IHero } from './shared/hero/hero.model';
+import { Hero } from './shared/hero/hero.model';
 
 @Component({
   selector: 'app-heroes',
@@ -11,9 +11,8 @@ import { IHero } from './shared/hero/hero.model';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes;
-
-  filteredHeroes = this.heroes;
+  heroes: Hero[];
+  filteredHeroes: Hero[];
 
   constructor(
     private filterService: FilterTextService,
@@ -22,7 +21,10 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+      .subscribe(heroes => {
+        this.heroes = heroes;
+        this.filteredHeroes = this.heroes;
+      });
   }
 
   filterChanged(searchText: string) {

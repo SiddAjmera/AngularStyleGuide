@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { ISpinnerState } from '../../services/spinner/spinner.interface';
+import { SpinnerState } from '../../services/spinner/spinner.interface';
 import { LoggerService } from '../../services/logger/logger.service';
 import { SpinnerService } from '../../services/spinner/spinner.service';
 
@@ -24,7 +24,7 @@ export class SpinnerComponent implements OnInit, OnDestroy {
   ngOnInit() {
     console.log(this.visible);
     this.spinnerStateChanged = this.spinnerService.spinnerState
-      .subscribe((state: ISpinnerState) => {
+      .subscribe((state: SpinnerState) => {
         this.visible = state.show;
         this.loggerService.log(`visible=${this.visible}`);
       });

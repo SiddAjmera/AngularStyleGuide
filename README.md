@@ -154,6 +154,9 @@ Once you're done, your Folder Structure should look something like this:
 
 1. Implement the lifecycle hook interfaces. Don't just use methods without implementing the Lifecycle Hook Interfaces.
 
+## Pro Tips
+1. Try to make shorter imports with [TypeScript Path Mapping](https://angularfirebase.com/lessons/shorten-typescript-imports-in-an-angular-project/).
+
 ## Helpful Tools
 
 1. Use [codelyzer](https://www.npmjs.com/package/codelyzer) to follow this guide.
