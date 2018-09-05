@@ -6,6 +6,7 @@ import { FilterTextComponent } from './components/filter-text/filter-text.compon
 import { FilterTextService } from './services/filter-text/filter-text.service';
 import { InitCapsPipe } from './pipes/init-caps/init-caps.pipe';
 import { ToastComponent } from './components/toast/toast.component';
+import { UserLoginComponent } from './components/deeply/nested/user-login/user-login.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ToastComponent } from './components/toast/toast.component';
   declarations: [
     FilterTextComponent,
     InitCapsPipe,
-    ToastComponent
+    ToastComponent,
+    UserLoginComponent
   ],
   providers: [FilterTextService],
   exports: [

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 
+import { Hero } from './hero.model';
 import { HEROES } from './heroes';
 
 @Injectable({
@@ -8,8 +9,8 @@ import { HEROES } from './heroes';
 })
 export class HeroService {
 
-  getHeroes() {
-    return from(HEROES);
+  getHeroes(): Observable<Hero[]> {
+    return from([HEROES]);
   }
 
 }
