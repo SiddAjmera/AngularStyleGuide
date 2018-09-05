@@ -153,6 +153,11 @@ Once you're done, your Folder Structure should look something like this:
 
 1. Implement the lifecycle hook interfaces. Don't just use methods without implementing the Lifecycle Hook Interfaces.
 
+## Pro Tips
+
+1. Implement Hot Module Replacement which is a Webpack feature.
+2. Create TypeScript Aliases for shorter imports.
+
 ## Helpful Tools
 
 1. Use [codelyzer](https://www.npmjs.com/package/codelyzer) to follow this guide.
